@@ -29,6 +29,10 @@ export class Module {
     let url = router.getUrl()
     let route = this.routes.find(r => r.path === url)
 
+    if (!route) {
+      route = this.routes.find(r => r.path === '**')
+    }
+
     document.querySelector('router-outlet').innerHTML = `<${route.component.selector}></${route.component.selector}>`
     this.renderComponent(route.component)
   }
