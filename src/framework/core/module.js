@@ -1,7 +1,6 @@
 import { router } from '../tools/router';
 
 export class Module {
-  // 22:00 lesson 4
   constructor(config) {
     this.components = config.components;
     this.bootstrapComponent = config.bootstrap;
@@ -38,7 +37,10 @@ export class Module {
   }
 
   renderComponent(c) {
+    c.onInit && c.onInit()
     c.render();
+    c.afterInit && c.afterInit()
+
   }
 }
 

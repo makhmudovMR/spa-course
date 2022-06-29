@@ -1,9 +1,31 @@
 import { CoreComponent } from '../../framework'
+import { router } from '../../framework/tools/router';
+
 
 class HomePageComponent extends CoreComponent {
+
   constructor(config) {
     super(config)
   }
+
+  events() {
+    return {
+      'click .link': 'onClickLink'
+    }
+  }
+
+  onInit(){
+    alert('on init')
+  }
+
+  afterInit(){
+    alert('after init')
+  }
+
+  onClickLink() {
+    router.navigate('tabs')
+  }
+
 }
 
 const homePageComponent = new HomePageComponent({
@@ -17,7 +39,7 @@ const homePageComponent = new HomePageComponent({
             <p>No content</p>
           </div>
           <div class="card-action">
-            <a href="#">Go to other link</a>
+            <a href="#" class='link'>Go to other link</a>
           </div>
         </div>
       </div>
