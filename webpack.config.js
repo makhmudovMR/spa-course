@@ -23,5 +23,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
     ]
-  }
+  },
+  resolve: {
+    alias: {
+      framework: path.resolve(__dirname, 'src', 'framework'),
+    },
+  },
 };

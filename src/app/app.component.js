@@ -1,4 +1,4 @@
-import { CoreComponent } from '../framework'
+import { CoreComponent } from 'framework'
 
 class AppComponent extends CoreComponent {
   constructor(config) {

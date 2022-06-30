@@ -1,4 +1,4 @@
-import { CoreComponent } from '../../framework'
+import { CoreComponent } from 'framework'
 import { router } from '../../framework/tools/router';
 
 
@@ -12,14 +12,6 @@ class HomePageComponent extends CoreComponent {
     return {
       'click .link': 'onClickLink'
     }
-  }
-
-  onInit(){
-    alert('on init')
-  }
-
-  afterInit(){
-    alert('after init')
   }
 
   onClickLink() {

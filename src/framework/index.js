@@ -1,5 +1,5 @@
 import { Module } from './core/module';
-import { Component } from './core/component'
+import { Component } from './core/component/component'
 import { bootstrap } from './core/bootstrap';
 import { utils } from './tools/utils';
 import { router } from './tools/router';
